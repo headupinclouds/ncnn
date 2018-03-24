@@ -32,28 +32,28 @@ matrix:
     # Linux {
 
     - os: linux
-      env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=clang-cxx17
+      env: CONFIG=Release TOOLCHAIN=clang-cxx17
 
     # FIXME: https://travis-ci.org/xsacha/hunter/jobs/347083573
     # - os: linux
-    #   env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=gcc-7-cxx17 VERBOSE=0
+    #   env: CONFIG=Release TOOLCHAIN=gcc-7-cxx17 
 
     - os: linux
-      env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=android-ndk-r16b-api-24-arm64-v8a-clang-libcxx14 VERBOSE=0
+      env: CONFIG=Release TOOLCHAIN=android-ndk-r16b-api-24-arm64-v8a-clang-libcxx14 
 
     # FIXME (TIFF broken)
     # * https://travis-ci.org/ingenue/hunter/jobs/116592968
     # - os: linux
-    #   env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=analyze-cxx17
+    #   env: CONFIG=Release TOOLCHAIN=analyze-cxx17
 
     - os: linux
-      env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=sanitize-address-cxx17
+      env: CONFIG=Release TOOLCHAIN=sanitize-address-cxx17
 
     - os: linux
-      env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=sanitize-leak-cxx17
+      env: CONFIG=Release TOOLCHAIN=sanitize-leak-cxx17
 
     - os: linux
-      env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=sanitize-thread-cxx17 VERBOSE=0
+      env: CONFIG=Release TOOLCHAIN=sanitize-thread-cxx17 
 
     # }
 
@@ -61,17 +61,17 @@ matrix:
 
     - os: osx
       osx_image: xcode9.2
-      env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=osx-10-13-make-cxx14
+      env: CONFIG=Release TOOLCHAIN=osx-10-13-make-cxx14
 
     - os: osx
       osx_image: xcode9.2
-      env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=osx-10-13-cxx14 VERBOSE=0
+      env: CONFIG=Release TOOLCHAIN=osx-10-13-cxx14 
 
     # Upload from local machine
     # FIXME: modules/core/src/parallel_impl.cpp:396:21: error: implicitly declaring library function '_mm_pause' with type 'void ()'
     # - os: osx
     #   osx_image: xcode9.2
-    #   env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=ios-nocodesign-11-2-dep-9-3 VERBOSE=0
+    #   env: CONFIG=Release TOOLCHAIN=ios-nocodesign-11-2-dep-9-3 
 
     # }
 
@@ -80,28 +80,28 @@ matrix:
     # Linux {
 
     - os: linux
-      env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=clang-cxx17 VERBOSE=0
+      env: CONFIG=Release-extra TOOLCHAIN=clang-cxx17 
 
     # FIXME: https://travis-ci.org/xsacha/hunter/jobs/347083589
     # - os: linux
-    #   env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=gcc-7-cxx17
+    #   env: CONFIG=Release-extra TOOLCHAIN=gcc-7-cxx17
 
     - os: linux
-      env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=android-ndk-r16b-api-24-arm64-v8a-clang-libcxx14 VERBOSE=0
+      env: CONFIG=Release-extra TOOLCHAIN=android-ndk-r16b-api-24-arm64-v8a-clang-libcxx14 
 
     # FIXME (TIFF broken)
     # * https://travis-ci.org/ingenue/hunter/jobs/116592968
     # - os: linux
-    #   env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=analyze-cxx17
+    #   env: CONFIG=Release-extra TOOLCHAIN=analyze-cxx17
 
     - os: linux
-      env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=sanitize-address-cxx17 VERBOSE=0
+      env: CONFIG=Release-extra TOOLCHAIN=sanitize-address-cxx17 
 
     - os: linux
-      env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=sanitize-leak-cxx17 VERBOSE=0
+      env: CONFIG=Release-extra TOOLCHAIN=sanitize-leak-cxx17 
 
     - os: linux
-      env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=sanitize-thread-cxx17 VERBOSE=0
+      env: CONFIG=Release-extra TOOLCHAIN=sanitize-thread-cxx17 
 
     # }
 
@@ -109,17 +109,17 @@ matrix:
 
     - os: osx
       osx_image: xcode9.2
-      env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=osx-10-13-make-cxx14
+      env: CONFIG=Release-extra TOOLCHAIN=osx-10-13-make-cxx14
 
     - os: osx
       osx_image: xcode9.2
-      env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=osx-10-13-cxx14 VERBOSE=0
+      env: CONFIG=Release-extra TOOLCHAIN=osx-10-13-cxx14 
 
     # Upload from local machine
     # FIXME: modules/core/src/parallel_impl.cpp:396:21: error: implicitly declaring library function '_mm_pause' with type 'void ()'
     # - os: osx
     #   osx_image: xcode9.2
-    #   env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=ios-nocodesign-11-2-dep-9-3 VERBOSE=0
+    #   env: CONFIG=Release-extra TOOLCHAIN=ios-nocodesign-11-2-dep-9-3 
 
     # }
 
@@ -129,24 +129,24 @@ matrix:
 
     # FIXME: https://travis-ci.org/xsacha/hunter/jobs/347083580
     # - os: linux
-    #   env: PROJECT_DIR=examples/OpenCV-Qt TOOLCHAIN=gcc-7-cxx17 VERBOSE=0
+    #   env: CONFIG=Release-Qt TOOLCHAIN=gcc-7-cxx17 
 
     - os: osx
       osx_image: xcode9.2
-      env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=ios-nocodesign-11-2-dep-9-3-armv7 VERBOSE=0
+      env: CONFIG=Release TOOLCHAIN=ios-nocodesign-11-2-dep-9-3-armv7 
 
     - os: osx
       osx_image: xcode9.2
-      env: PROJECT_DIR=examples/OpenCV TOOLCHAIN=ios-nocodesign-11-2-dep-9-3-arm64 VERBOSE=0
+      env: CONFIG=Release TOOLCHAIN=ios-nocodesign-11-2-dep-9-3-arm64 
 
     - os: osx
       osx_image: xcode9.2
-      env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=ios-nocodesign-11-2-dep-9-3-armv7 VERBOSE=0
+      env: CONFIG=Release-extra TOOLCHAIN=ios-nocodesign-11-2-dep-9-3-armv7 
 
     # Upload from local machine
     - os: osx
       osx_image: xcode9.2
-      env: PROJECT_DIR=examples/OpenCV-extra TOOLCHAIN=ios-nocodesign-11-2-dep-9-3-arm64 VERBOSE=0
+      env: CONFIG=Release-extra TOOLCHAIN=ios-nocodesign-11-2-dep-9-3-arm64 
 
     # }
 

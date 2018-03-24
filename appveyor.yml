@@ -12,7 +12,7 @@ environment:
 
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
       TOOLCHAIN: "vs-14-2015"
-      PROJECT_DIR: examples\OpenCV-extra
+      CONFIG: Release
 
 install:
   - cmd: bin\hunter_env.cmd
