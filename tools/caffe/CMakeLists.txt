@@ -16,5 +16,4 @@ target_include_directories(caffe2ncnn
 
 #target_link_libraries(caffe2ncnn ${PROTOBUF_LIBRARIES})
 target_link_libraries(caffe2ncnn protobuf::libprotobuf)
-
-install(TARGETS caffe2ncnn DESTINATION bin)
+install(TARGETS caffe2ncnn EXPORT ${TARGETS_EXPORT_NAME} DESTINATION bin COMPONENT bin)

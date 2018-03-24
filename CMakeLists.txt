@@ -28,6 +28,10 @@ endif()
 
 set(NCNN_TOP_DIR "${CMAKE_CURRENT_LIST_DIR}")
 
+set(TARGETS_EXPORT_NAME "${PROJECT_NAME}Targets")
+
+add_subdirectory(src)
+
 if(NCNN_BUILD_EXAMPLES)
   add_subdirectory(examples)
 endif()
@@ -36,7 +40,6 @@ if(NCNN_BUILD_BENCHMARK)
   add_subdirectory(benchmark)
 endif()
 
-add_subdirectory(src)
 if(NCNN_BUILD_TOOLS AND NOT ANDROID AND NOT IOS)
   add_subdirectory(tools)
 endif()
