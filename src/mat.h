@@ -15,8 +15,9 @@
 #ifndef NCNN_MAT_H
 #define NCNN_MAT_H
 
-#include <stdlib.h>
 #include <string>
+#include <stdlib.h>
+#include <string.h>
 #if __ARM_NEON
 #include <arm_neon.h>
 #endif
