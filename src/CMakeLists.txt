@@ -148,8 +148,8 @@ target_include_directories(ncnn
 if(NCNN_OPENMP)
     find_package(OpenMP) # >= 3.0 for 'collapse'
     if((OpenMP_CXX_FOUND OR OPENMP_FOUND) AND OpenMP_CXX_VERSION_MAJOR GREATER_EQUAL 3.0)
-        target_compile_options(${target} PUBLIC ${OpenMP_CXX_FLAGS})
-        target_link_libraries(${target} PUBLIC ${OpenMP_CXX_FLAGS})
+        target_compile_options(ncnn PUBLIC ${OpenMP_CXX_FLAGS})
+        target_link_libraries(ncnn PUBLIC ${OpenMP_CXX_FLAGS})
     endif()
 endif()
 
