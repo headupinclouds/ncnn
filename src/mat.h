@@ -396,6 +396,7 @@ inline Mat Mat::clone() const
         m.create(w, h, elemsize);
     else if (dims == 3)
         m.create(w, h, c, elemsize);
+    else return Mat(); // empty() == unsupported
 
     if (total() > 0)
     {
